@@ -19,7 +19,7 @@ pci_url = attribute('pci_url')
 pci_section = '6.4'
 
 environment_label = attribute('environment_label')
-gke_clusters = get_gke_clusters(gcp_project_id)
+gke_clusters = get_gke_clusters(gcp_project_id, gcp_gke_locations)
 
 title "[PCI-DSS-#{pci_version}][#{pci_section}] Follow change control processes and procedures for all changes to system components"
 
