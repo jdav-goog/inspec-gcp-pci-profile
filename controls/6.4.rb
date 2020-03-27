@@ -17,6 +17,7 @@ gcp_project_id = attribute('gcp_project_id')
 pci_version = attribute('pci_version')
 pci_url = attribute('pci_url')
 pci_section = '6.4'
+gcp_gke_locations = attribute('gcp_gke_locations')
 
 environment_label = attribute('environment_label')
 gke_clusters = get_gke_clusters(gcp_project_id, gcp_gke_locations)
