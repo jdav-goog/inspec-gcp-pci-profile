@@ -17,8 +17,9 @@ gcp_project_id = attribute('gcp_project_id')
 pci_version = attribute('pci_version')
 pci_url = attribute('pci_url')
 pci_section = '8.6'
+gcp_gke_locations = attribute('gcp_gke_locations')
 
-gke_clusters = get_gke_clusters(gcp_project_id)
+gke_clusters = get_gke_clusters(gcp_project_id, gcp_gke_locations)
 
 title "[PCI-DSS-#{pci_version}][#{pci_section}] Where other authentication mechanisms are used, authentication mechanisms must be assigned to an individual account and not shared among multiple accounts and physical and/or logical controls must be in place to ensure only the intended account can use that mechanism to gain access."
 
