@@ -17,8 +17,9 @@ gcp_project_id = attribute('gcp_project_id')
 pci_version = attribute('pci_version')
 pci_url = attribute('pci_url')
 pci_section = '7.2'
+gcp_gke_locations = attribute('gcp_gke_locations')
 
-gke_clusters = get_gke_clusters(gcp_project_id)
+gke_clusters = get_gke_clusters(gcp_project_id, gcp_gke_locations)
 
 title "[PCI-DSS-#{pci_version}][#{pci_section}] Establish an access control system(s) for systems components that restricts access based on a user’s need to know, and is set to “deny all” unless specifically allowed. "
 
