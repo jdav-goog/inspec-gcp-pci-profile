@@ -62,6 +62,11 @@ attributes:
   description: 'The allowed age in seconds of the inventory file'
   value: 86400
   type: numeric
+- name: gcp_gke_locations
+  description: 'The list of regions and/or zone names where GKE clusters are running. An empty array searches all locations'
+  type: array
+  value:
+    - ""
 - name: gcs_pii_buckets
   description: 'The list of buckets that contain PII, PHI, etc'
   type: array
